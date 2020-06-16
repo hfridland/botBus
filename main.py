@@ -5,7 +5,7 @@ from busInfo import get_bus_info, bus_info_to_string
 bot name: VanBusStopInfo
 bot username: VanBusStopInfoBot
 heroku: https://bot-bus.herokuapp.com/ | https://git.heroku.com/bot-bus.git
-        https://whispering-mountain-82258.herokuapp.com/ | https://git.heroku.com/whispering-mountain-82258.git
+        https://sheltered-harbor-89619.herokuapp.com/ | https://git.heroku.com/sheltered-harbor-89619.git
 """
 
 token = '1115434264:AAHSsZqEB-WF52QekjnnSjyv_dd6MDjhqlA'
@@ -16,6 +16,8 @@ bot = telebot.TeleBot(token)
 def help_handler(message):
     text = """
     Works in Vancouver, BC area only
+    Author Haim Fridland 
+    hfridland@shaw.ca
     /start, /help - for obtaining info about nearest bus stops please enter current location
     """
     bot.send_message(chat_id=message.chat.id, text=text)
