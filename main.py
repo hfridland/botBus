@@ -1,14 +1,14 @@
 import telebot
+import os
 from busInfo import get_bus_info, bus_info_to_string
 
 """
 bot name: VanBusStopInfo
 bot username: VanBusStopInfoBot
-heroku: https://bot-bus.herokuapp.com/ | https://git.heroku.com/bot-bus.git
-        https://sheltered-harbor-89619.herokuapp.com/ | https://git.heroku.com/sheltered-harbor-89619.git
+heroku: https://gentle-island-84337.herokuapp.com/ | https://git.heroku.com/gentle-island-84337.git
 """
 
-token = '1115434264:AAHSsZqEB-WF52QekjnnSjyv_dd6MDjhqlA'
+token = os.getenv("TOKEN")
 bot = telebot.TeleBot(token)
 
 
@@ -25,7 +25,6 @@ def help_handler(message):
 
 @bot.message_handler(content_types=['location'])
 def handle_location(message):
-    # print(message.location)
     lat = message.location.latitude
     lon = message.location.longitude
     s = bus_info_to_string(get_bus_info(lat, lon))

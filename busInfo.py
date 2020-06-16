@@ -41,9 +41,10 @@ def bus_info_to_string(bus_unfo):
                 s += f"  {route_no} {route_name} {route_direction}\n    "
                 for schedule in route['Schedules']:
                     elt = schedule['ExpectedLeaveTime']
-                    elt = datetime.datetime.strptime(elt, "%I:%M%p %Y-%m-%d").time()
-                    s += f"{elt:%I:%M%p} "
-                s += "\n"
+                    # elt = datetime.datetime.strptime(elt, "%I:%M%p %Y-%m-%d").time()
+                    # s += f"{elt:%I:%M%p} "
+                    s += f"{elt} "
+                s += "\n------------------------------------------------\n"
 
     return s
 
