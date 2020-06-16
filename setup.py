@@ -7,8 +7,8 @@ setuptools.setup(
     author="Haim Fridland",
     author_email="hfridland@shaw.ca",
     description="Vancouver bus stop requester",
-    long_description="Vancouver bus stop requester",
-    long_description_content_type="text/markdown",
+    # ong_description="Vancouver bus stop requester",
+    # long_description_content_type="text/markdown",
     url="https://github.com/hfridland/botBus",
     packages=setuptools.find_packages(),
     classifiers=[
